@@ -1124,7 +1124,7 @@ msgid "dsa"
 msgstr ""
 
 #: grub-core/commands/verify.c:258
-msgid "™"
+msgid "ï¿½"
 msgstr ""
 
 #: grub-core/commands/verify.c:531
@@ -1473,7 +1473,7 @@ msgid "Volume5"
 msgstr ""
 
 #: grub-core/disk/luks.c:40
-msgid "LUKSº¾"
+msgid "LUKSï¿½ï¿½"
 msgstr ""
 
 #: grub-core/disk/luks.c:150
@@ -1517,7 +1517,7 @@ msgid "essiv:"
 msgstr ""
 
 #: grub-core/disk/luks.c:40
-msgid "LUKSº¾"
+msgid "LUKSï¿½ï¿½"
 msgstr ""
 
 #: grub-core/disk/mdraid_linux.c:250
@@ -1618,11 +1618,11 @@ msgid "070702"
 msgstr ""
 
 #: grub-core/fs/cpio.c:76
-msgid "qÇ"
+msgid "qï¿½"
 msgstr ""
 
 #: grub-core/fs/cpio.c:78
-msgid "Çq"
+msgid "ï¿½q"
 msgstr ""
 
 #: grub-core/fs/cpio.c:96
@@ -4070,7 +4070,7 @@ msgid "%d    "
 msgstr ""
 
 #: grub-core/commands/verify.c:258
-msgid "™"
+msgid "ï¿½"
 msgstr ""
 
 #: grub-core/disk/cryptodisk.c:576
@@ -4090,7 +4090,7 @@ msgid ""
 msgstr ""
 
 #: grub-core/disk/luks.c:40
-msgid "LUKSº¾"
+msgid "LUKSï¿½ï¿½"
 msgstr ""
 
 #: grub-core/font/font.c:450 grub-core/font/font.c:454
@@ -4777,18 +4777,18 @@ msgstr ""
 
 #: grub-core/kern/main.c:261
 msgid ""
-"Welcome to GRUB!\n"
+"Welcome to GRUB2!\n"
 "\n"
 msgstr ""
 
 #: grub-core/kern/misc.c:1105
 msgid ""
 "\n"
-"Aborted."
+"UNRECOVERABLE ERROR!"
 msgstr ""
 
 #: grub-core/kern/misc.c:1111
-msgid " Press any key to exit."
+msgid " System halted."
 msgstr ""
 
 #: grub-core/kern/err.c:131
