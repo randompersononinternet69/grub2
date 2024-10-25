@@ -248,7 +248,7 @@ argp_parser (int key, char *arg, struct argp_state *state)
 static struct argp_option options[] = {
   GRUB_INSTALL_OPTIONS,
   {"boot-directory", OPTION_BOOT_DIRECTORY, N_("DIR"),
-   0, N_("install GRUB images under the directory DIR/%s instead of the %s directory"), 2},
+   0, N_("Install GRUB images under the directory DIR/%s instead of the %s directory."), 2},
   {"root-directory", OPTION_ROOT_DIRECTORY, N_("DIR"),
    OPTION_HIDDEN, 0, 2},
   {"font", OPTION_FONT, N_("FILE"),
@@ -367,10 +367,10 @@ help_filter (int key, const char *text, void *input __attribute__ ((unused)))
    install to.  */
 struct argp argp = {
   options, argp_parser, N_("[OPTION] [INSTALL_DEVICE]"),
-  N_("Install GRUB on your drive.")"\v"
+  N_("Install GRUB 2 on your drive.")"\v"
   N_("INSTALL_DEVICE must be system device filename.\n"
-     "%s copies GRUB images into %s.  On some platforms, it"
-     " may also install GRUB into the boot sector."), 
+     "%s copies GRUB 2 images into %s.  On some platforms, it"
+     " may also install GRUB 2 into the boot sector."), 
   NULL, help_filter, NULL
 };
 
@@ -422,7 +422,7 @@ probe_mods (grub_disk_t disk)
   int raid_level;
 
   if (disk->partition == NULL)
-    grub_util_info ("no partition map found for %s", disk->name);
+    grub_util_info ("No partition map found for %s.", disk->name);
 
   for (part = disk->partition; part; part = part->parent)
     push_partmap_module (part->partmap->name, NULL);
@@ -575,7 +575,7 @@ get_rndstr (void)
   char * ret = xmalloc (sz + 1);
   size_t i;
   if (grub_get_random (rnd, sizeof (rnd)))
-    grub_util_error ("%s", _("couldn't retrieve random data"));
+    grub_util_error ("%s", _("Couldn't retrieve random data."));
   for (i = 0; i < sz; i++)
     {
       grub_size_t b = i * 5;

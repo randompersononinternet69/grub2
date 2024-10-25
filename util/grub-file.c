@@ -76,11 +76,11 @@ main (int argc, char *argv[])
 	  continue;
 	}
       if (had_file)
-	grub_util_error ("one argument expected");
+	grub_util_error ("One argument expected.");
       argv2[i - 1] = grub_canonicalize_file_name (argv[i]);
       if (!argv2[i - 1])
 	{
-	  grub_util_error (_("cannot open `%s': %s"), argv[i],
+	  grub_util_error (_("Cannot open `%s': %s"), argv[i],
 			   strerror (errno));
 	}
       had_file = 1;
@@ -97,7 +97,7 @@ main (int argc, char *argv[])
 
   cmd = grub_command_find ("file");
   if (! cmd)
-    grub_util_error (_("can't find command `%s'"), "file");
+    grub_util_error (_("Can't find command `%s'."), "file");
 
   err = (cmd->func) (cmd, argc - 1, argv2);
   if (err && err != GRUB_ERR_TEST_FAILURE)
