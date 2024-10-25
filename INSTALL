@@ -1,8 +1,6 @@
--*- Text -*-
+This is GRUB 2. Welcome.
 
-This is the GRUB.  Welcome.
-
-This file contains instructions for compiling and installing the GRUB.
+This file contains instructions for compiling and installing GRUB 2.
 
 Where this document refers to packages names, they are named according to the
 Debian 11 package repositories. These packages can be found by searching
@@ -11,9 +9,9 @@ https://packages.debian.org/.
 The Requirements
 ================
 
-GRUB depends on some software packages installed into your system. If
+GRUB 2 depends on some software packages installed into your system. If
 you don't have any of them, please obtain and install them before
-configuring the GRUB.
+configuring GRUB 2.
 
 * GCC 5.1.0 or later
   Experimental support for clang 3.8.0 or later (results in much bigger binaries)
@@ -94,7 +92,7 @@ To build the documentation you'll need:
 * texinfo, for the info and html documentation
 * texlive, for building the dvi and pdf documentation (optional)
 
-Configuring the GRUB
+Configuring GRUB 2
 ====================
 
 The `configure' shell script attempts to guess correct values for
@@ -118,7 +116,7 @@ called `autoconf'.  You only need `configure.in' if you want to change
 it or regenerate `configure' using a newer version of `autoconf'.
 
 
-Building the GRUB
+Building GRUB 2
 =================
 
 The simplest way to compile this package is:
@@ -162,7 +160,7 @@ The simplest way to compile this package is:
      all sorts of other programs in order to regenerate files that came
      with the distribution.
 
-Cross-compiling the GRUB
+Cross-compiling GRUB 2
 ========================
 
 GRUB defines 3 platforms:
@@ -293,10 +291,10 @@ If the package supports it, you can cause programs to be installed
 with an extra prefix or suffix on their names by giving `configure'
 the option `--program-prefix=PREFIX' or `--program-suffix=SUFFIX'.
 
-Please note, however, that the GRUB knows where it is located in the
+Please note, however, that GRUB 2 knows where it is located in the
 filesystem.  If you have installed it in an unusual location, the
 system might not work properly, or at all.  The chief utility of these
-options for the GRUB is to allow you to "install" in some alternate
+options for GRUB 2 is to allow you to "install" in some alternate
 location, and then copy these to the actual root filesystem later.
 
 
