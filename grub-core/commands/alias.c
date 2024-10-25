@@ -57,7 +57,7 @@ my_cmd (grub_command_t cmd, int argc, char **argv)
   func = grub_command_find (my_argv[0]);
   if (! func)
   {
-    grub_error (GRUB_ERR_BAD_OS, N_("Unknown command `%s'.\n"), my_argv[0]);
+    grub_error (GRUB_ERR_BAD_OS, N_("Unknown command: `%s'.\n"), my_argv[0]);
     goto quit;
   }
   if (my_argc + argc < 2)
@@ -126,7 +126,7 @@ grub_alias_add (const char *name, const char *cmd, const char *help)
       grub_dprintf ("alias", "overwrite \'%s\' -> \'%s\'", p, cmd);
       p = grub_strdup (cmd);
       if (! p)
-        return grub_error (GRUB_ERR_OUT_OF_MEMORY, "out of memory");
+        return grub_error (GRUB_ERR_OUT_OF_MEMORY, "Out of free RAM/memory!");
       grub_free (f->cmd);
       f->cmd = p;
       if (f->help)
@@ -142,14 +142,14 @@ grub_alias_add (const char *name, const char *cmd, const char *help)
       grub_dprintf ("alias", "append %s=\'%s\'", name, cmd);
       f->next = grub_alias_create (name, cmd, help);
       if (! f->next)
-        return grub_error (GRUB_ERR_OUT_OF_MEMORY, "out of memory");
+        return grub_error (GRUB_ERR_OUT_OF_MEMORY, "Out of free RAM/memory!");
       return GRUB_ERR_NONE;
     }
   }
   grub_dprintf ("alias", "add alias %s=\'%s\'", name, cmd);
   f = grub_alias_create (name, cmd, help);
   if (! f)
-    return grub_error (GRUB_ERR_OUT_OF_MEMORY, "out of memory");
+    return grub_error (GRUB_ERR_OUT_OF_MEMORY, "Out of free RAM/memory!");
   grub_alias_list = f;
   return GRUB_ERR_NONE;
 }
@@ -223,16 +223,18 @@ grub_cmd_unalias (grub_command_t cmd __attribute__((__unused__)),
 
 static grub_err_t
 grub_cmd_type (grub_command_t cmd __attribute__((__unused__)),
-                   int argc, char *argv[])
-{
+                   int argc, char *argv[]) {
   grub_command_t func;
   if (argc < 1)
-    return grub_error (GRUB_ERR_BAD_ARGUMENT, N_("bad argument"));
+    return grub_error (GRUB_ERR_BAD_ARGUMENT, N_("Bad argument"));
   func = grub_command_find (argv[0]);
-  if (! func)
+  if (! func) {
+    grub_dprintf ("type", "command '%s' not found", argv[0]);
     return GRUB_ERR_TEST_FAILURE;
-  else
+  } else {
+    grub_dprintf ("type", "command '%s' found", argv[0]);
     return GRUB_ERR_NONE;
+  }
 }
 
 static grub_command_t cmd_alias, cmd_unalias, cmd_type;

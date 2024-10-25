@@ -37,7 +37,7 @@ grub_rescue_read_line (char **line, int cont,
   int pos = 0;
   char str[4];
 
-  grub_printf ((cont) ? "> " : "grub rescue> ");
+  grub_printf ((cont) ? "> " : "grub2 rescue> ");
   grub_memset (linebuf, 0, GRUB_RESCUE_BUF_SIZE);
 
   while ((c = grub_getkey ()) != '\n' && c != '\r')

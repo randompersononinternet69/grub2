@@ -220,12 +220,12 @@ set_variables (const char *name, int argc, char *argv[])
 
       p = strchr (argv[0], '=');
       if (! p)
-        grub_util_error (_("invalid parameter %s"), argv[0]);
+        grub_util_error (_("Invalid parameter %s."), argv[0]);
 
       *(p++) = 0;
 
       if (! grub_envblk_set (envblk, argv[0], p))
-        grub_util_error ("%s", _("environment block too small"));
+        grub_util_error (_("Environment block too small."));
 
       argc--;
       argv++;
@@ -265,7 +265,7 @@ main (int argc, char *argv[])
   /* Parse our arguments */
   if (argp_parse (&argp, argc, argv, 0, &curindex, 0) != 0)
     {
-      fprintf (stderr, "%s", _("Error in parsing command line arguments\n"));
+      fprintf (stderr, "%s", _("Error in parsing command line arguments!\n"));
       exit(1);
     }
 
@@ -295,7 +295,7 @@ main (int argc, char *argv[])
   else
     {
       char *program = xstrdup(program_name);
-      fprintf (stderr, _("Unknown command `%s'.\n"), command);
+      fprintf (stderr, _("Unknown command: `%s'.\n"), command);
       argp_help (&argp, stderr, ARGP_HELP_STD_USAGE, program);
       free(program);
       exit(1);

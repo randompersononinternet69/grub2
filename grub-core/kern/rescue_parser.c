@@ -74,9 +74,9 @@ grub_rescue_parse_line (char *line,
     }
   else
     {
-      grub_printf_ (N_("Unknown command `%s'.\n"), name);
+      grub_printf_ (N_("Unknown command: `%s'.\n"), name);
       if (grub_command_find ("help"))
-	grub_printf ("Try `help' for usage\n");
+	grub_printf ("Try `help' for usage.\n");
     }
 
  quit:
