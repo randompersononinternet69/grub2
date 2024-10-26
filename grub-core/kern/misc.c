@@ -1741,7 +1741,7 @@ grub_printf_fmt_check (const char *fmt, const char *fmt_expected)
 }
 
 
-/* Abort GRUB. This function does not return.  */
+/* Abort GRUB. This function does not return. Seems to freeze on some PC's BIOS's. Probably a BIOS bug.  */
 static void __attribute__ ((noreturn))
 grub_abort (void)
 {
@@ -1755,7 +1755,7 @@ grub_abort (void)
       grub_getkey ();
     }
 
-  grub_reboot (1);
+  grub_exit (1);
 }
 
 #if defined (__clang__) && !defined (GRUB_UTIL)
