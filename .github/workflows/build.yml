@@ -1,9 +1,7 @@
 name: release
 # todo: exclude readme.md updates
 on:
-  push:
-    branches:
-      - master
+ workflow_dispatch:
 
 jobs:
   build:
