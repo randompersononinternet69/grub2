@@ -14,14 +14,14 @@ This is **GRUB 2**, the second version of the **GRand Unified Bootloader**.
 GRUB 2 is rewritten from scratch to make **GNU GRUB** cleaner, safer, more
 robust, more powerful, and more portable.
 
-See the file [NEWS](NEWS) for a description of recent changes to GRUB 2.
+See the file [NEWS](NEWS) for a description of recent changes to **GRUB 2**.
 
 See the file [INSTALL](INSTALL) for instructions on how to build and install the
 GRUB 2 data and program files.
 
 See the file [MAINTAINERS](MAINTAINERS) for information about the GRUB 2 maintainers, etc.
 
-If you found a security vulnerability in the GRUB please check the [SECURITY](SECURITY)
+If you found a security vulnerability in GRUB 2 please check the [SECURITY](SECURITY)
 file to get more information how to properly report this kind of bugs to
 the GRUB 2 maintainers.
 Please visit the official web page of **GRUB 2**, for more information.
